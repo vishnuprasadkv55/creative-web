@@ -1,0 +1,22 @@
+#fixed-nav-bar{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    display: block;
+    transition: top 0.3s;
+}
+#nav-bar{
+    display: flex;
+    flex-direction: column;
+}
+#hide-nav{
+    height: 3em;
+    background-color: blue;
+    width: 100%;
+    transition: top 0.3s;
+}
+#static-nav{
+    height: 4em;
+    background-color: black;
+    width: 100%;
+}
