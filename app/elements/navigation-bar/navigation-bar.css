@@ -1,22 +1,108 @@
-#fixed-nav-bar{
-    position: fixed;
-    top: 0px;
-    width: 100%;
-    display: block;
-    transition: top 0.3s;
+#fixed-nav-bar {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
 }
-#nav-bar{
-    display: flex;
-    flex-direction: column;
+
+#nav-bar {
+  display: flex;
+  flex-direction: column;
 }
-#hide-nav{
-    height: 3em;
-    background-color: blue;
-    width: 100%;
-    transition: top 0.3s;
+
+#hide-nav {
+  height: 3em;
+  background-color: white;
+  width: 100%;
+  transition: top 0.3s;
 }
-#static-nav{
-    height: 4em;
-    background-color: black;
-    width: 100%;
+
+#static-nav {
+  height: 4em;
+  background-color: black;
+  width: 100%;
+}
+
+.category-buttons {
+  background-color: transparent;
+  border: 0;
+  color: #767676;
+  cursor: pointer;
+  display: block;
+  font-size: 14px;
+  height: auto;
+  margin: 0;
+  outline: none;
+  padding: 0;
+  position: relative;
+  text-decoration: none;
+  transition: color 350ms ease;
+}
+
+.logo-bg {
+  background: url(https://img.icons8.com/ios-filled/72/google-logo.png) no-repeat;
+  background-size: cover;
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+}
+
+.left-block {
+  margin-left: 20px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+}
+
+.up-arrow {
+  transform-origin: center center;
+  display: inline-block;
+  width: 12px;
+  margin-left: 4px;
+  height: 12px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  vertical-align: middle;
+  transition: transform 350ms ease;
+}
+
+.left-block-menu {
+  margin-left: 24px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.nav-button {
+  margin-left: 24px;
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+}
+
+.visually-hidden {
+  position: absolute;
+  opacity: 0;
+}
+
+.checkbox-hack {
+  cursor: pointer;
+}
+
+.nav-button>label {
+  user-select: none;
+}
+
+.sub-nav {
+  display: block;
+  min-height: 480px;
+  top: 48px;
+  position: absolute;
+  width: 100vw;
+  left: 0;
+  background: #fff;
+  padding-top: 32px;
 }

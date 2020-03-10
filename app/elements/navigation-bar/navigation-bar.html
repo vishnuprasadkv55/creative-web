@@ -10,20 +10,50 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 
 <dom-module id="navigation-bar">
-
-    <link rel="import" type="css" href="navigation-bar.css">
-    <template>
-        <div id="fixed-nav-bar">
-            <div id="nav-bar">
-                <div id="hide-nav">
-
-                </div>
-                <div id="static-nav">
-
-                </div>
+  <link rel="import" type="css" href="navigation-bar.css">
+  <template>
+    <div id="fixed-nav-bar">
+      <div id="nav-bar">
+        <div id="hide-nav">
+          <div class="left-block">
+            <span class="logo-bg"></span>
+            <div class="left-block-menu">
+              <div class="nav-button">
+                <label class="checkbox-hack" for="toggle1">Phones</label>
+                <input type="checkbox" on-tap="showPhoneSubnav" id="toggle1" class="visually-hidden">
+                <template is="dom-if" if="{{hidePhoneNav}}" restamp>
+                  <div id="scroll-lock" class="sub-nav">
+                    sajhjashbd
+                  </div>
+                </template>
+              </div>
+              <div class="nav-button">
+                <label class="checkbox-hack" for="toggle2">Connected Homes</label>
+                <input type="checkbox" on-tap="showHomeSubnav" id="toggle2" class="visually-hidden">
+                <template is="dom-if" if="{{hideHomeNav}}" restamp>
+                  <div id="scroll-lock" class="sub-nav">
+                    2aamatheaan
+                  </div>
+                </template>
+              </div>
+              <div class="nav-button">
+                <label class="checkbox-hack" for="toggle3">Accessories</label>
+                <input type="checkbox" on-tap="showAccessoriesSubnav" id="toggle3" class="visually-hidden">
+                <template is="dom-if" if="{{hideAccessorieseNav}}" restamp>
+                  <div id="scroll-lock" class="sub-nav">
+                    3sajhjashbd
+                  </div>
+                </template>
+              </div>
             </div>
+          </div>
         </div>
-    </template>
+        <div id="static-nav">
 
-    <script src="navigation-bar.js"></script>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <script src="navigation-bar.js"></script>
 </dom-module>
