@@ -1,0 +1,46 @@
+.first-page{
+    height: 40em;
+    width: 100%;
+    background-color: black;
+}
+.second-page{
+    height: 40em;
+    width: 100%;
+    background-color: grey;
+}
+.third-page{
+    height: 40em;
+    width: 100%;
+    background-color: white;
+}
+.fourth-page{
+    height: 40em;
+    width: 100%;
+    background-color: darkgreen;
+}
+.fifth-page{
+    height: 40em;
+    width: 100%;
+    background-color: burlywood;
+}
+.main-content{
+margin-top: 7em;
+}
+.specific-content{
+}
+/*Use this class when you want your content to be hidden*/
+.BeforeScroll
+{
+  height: 100px; /*Whatever you want*/
+  width: 100%; /*Whatever you want*/
+  display: none;
+}
+
+
+/*Use this class when you want your content to be shown after some scroll*/
+.AfterScroll
+{
+  height: 100px; /*Whatever you want*/
+  width: 100%; /*Whatever you want*/
+  display: block;
+}
