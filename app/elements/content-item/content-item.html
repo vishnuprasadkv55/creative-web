@@ -8,21 +8,25 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
 <link rel="import" href="../../bower_components/polymer/polymer.html">
-
+<link rel="import" href="elements/elements.html">
 <dom-module id="content-item">
   <link rel="import" type="css" href="content-item.css">
   <template>
       <div id="main-content-selector" class="main-content">
           <div class="specific-content">
       <div class="first-page" id="section1">
-          dsfsdf
-      </div>
+        <div class="section1-text reveal-text" id="divToShowHide">Content you want to show hide on scroll</div>
+        <video autoplay loop poster="http://media.w3.org/2010/05/sintel/poster.png" muted="muted">
+            <source id="mp4" src="https://vod-progressive.akamaized.net/exp=1584058397~acl=%2A%2F1672015605.mp4%2A~hmac=fbc9dd682b0c1fc00ad46294880ff79ee7d1af469209347f394c2d3eafaf2702/vimeo-prod-skyfire-std-us/01/3797/15/393989908/1672015605.mp4" type="video/mp4">
+      
+               
+            </div>
       <div class="second-page" id="section2">
-        dsfsdf
+        <div class="section2-text reveal-text" id="divToShowHide"><vertical-slider></vertical-slider></div>
+              
     </div>
     <div class="third-page" id="section3">
-        <div id = "divToShowHide" class = "BeforeScroll">Content you want to show hide on scroll</div>
-        dsfsdf
+        <div class="section3-text reveal-text" id="divToShowHide">Content you want to show hide on scroll</div>
     </div>
     <div class="fourth-page" id="section4">
         dsfsdf

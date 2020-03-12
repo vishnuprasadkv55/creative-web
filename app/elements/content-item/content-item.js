@@ -1,32 +1,29 @@
 Polymer({
     is: 'content-item',
   
-  
+    observers:['observeScroll(scrollPosition)'],
     properties: {
-        
     },
     attached: function() {
-        var me = this;
-        var div = me.$$("#divToShowHide");
-  //Take the current position (vertical position from top) of your div in the variable
-  var pos = me.$$("#divToShowHide").offsetTop;
-  //Now when scroll event trigger do following
-  window.onscroll = function () {
-   var windowpos = document.documentElement.scrollTop;
-   //Now if you scroll more than 100 pixels vertically change the class to AfterScroll
-   // I am taking 100px scroll, you can take whatever you need
-   if (windowpos >= 900) {
-    me.$$("#divToShowHide").classList.add("AfterScroll");
-   }
-   //If scroll is less than 100px, remove the class AfterScroll so that your content will be hidden again 
-   if (windowpos >= 1800) {
-    me.$$("#divToShowHide").classList.remove("AfterScroll");
-   }
-   if (windowpos < 900) {
-    me.$$("#divToShowHide").classList.remove("AfterScroll");
-   }
-   //Note: If you want the content should be shown always once you scroll and do not want to hide it again when go to top agian, no need to write the else part
- };
-    }
+      var faders = document.querySelectorAll('.reveal-text');
+      var appearOptions = {
+        root: null, // relative to document viewport 
+        rootMargin: '0px', // margin around root. Values are similar to css property. Unitless values not allowed
+        threshold: 1.0 // visible amount of item shown in relation to root
+      };
+      var appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll){
+        entries.forEach(function(entry) {
+          if(entry.isIntersecting){
+            entry.target.classList.add(entry.target.parentElement.id + '-appear');
+          } else{
+            entry.target.classList.remove(entry.target.parentElement.id + '-appear');
+          }
+        });
+      },appearOptions);
+    
+faders.forEach(function(fader){
+  appearOnScroll.observe(fader);
+});
+    },
   });
   

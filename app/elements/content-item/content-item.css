@@ -1,46 +1,101 @@
-.first-page{
-    height: 40em;
-    width: 100%;
-    background-color: black;
-}
-.second-page{
-    height: 40em;
-    width: 100%;
-    background-color: grey;
-}
-.third-page{
-    height: 40em;
-    width: 100%;
-    background-color: white;
-}
-.fourth-page{
-    height: 40em;
-    width: 100%;
-    background-color: darkgreen;
-}
-.fifth-page{
-    height: 40em;
-    width: 100%;
-    background-color: burlywood;
-}
-.main-content{
-margin-top: 7em;
-}
-.specific-content{
-}
-/*Use this class when you want your content to be hidden*/
-.BeforeScroll
-{
-  height: 100px; /*Whatever you want*/
-  width: 100%; /*Whatever you want*/
-  display: none;
+.first-page {
+  height: 40em;
+  width: 100%;
+  background-color: black;
 }
 
+.first-page>.reveal-text {
+  margin-left: 2em;
+  width: 6em;
+  color: antiquewhite;
+  position: absolute;
+  z-index: 1;
+}
 
-/*Use this class when you want your content to be shown after some scroll*/
-.AfterScroll
-{
-  height: 100px; /*Whatever you want*/
-  width: 100%; /*Whatever you want*/
-  display: block;
+.second-page>.reveal-text {
+    margin-top: 10em;
+    font-size: 1em;
+  width: 6em;
+  color: antiquewhite;
+  position: absolute;
+  z-index: 1;
+}
+
+.first-page video {}
+
+.second-page {
+  height: 40em;
+  width: 100%;
+  background-color: grey;
+}
+
+.specific-content {
+  overflow: auto;
+}
+
+.third-page {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40em;
+  width: 100%;
+  background-color: white;
+}
+
+.fourth-page {
+  height: 40em;
+  width: 100%;
+  background-color: darkgreen;
+}
+
+.fifth-page {
+  height: 40em;
+  width: 100%;
+  background-color: burlywood;
+}
+
+video {
+  width: 100%;
+}
+
+.reveal-text {
+  font-weight: 600;
+  font-family: monospace;
+  font-size: 3em;
+  transition: all 250ms ease-in;
+}
+
+.section1-text {
+  margin-top: 6em;
+  opacity: 0;
+}
+
+.section1-appear {
+  margin-top: 4em;
+  opacity: 1;
+}
+
+.section2-text {
+  margin-left: 0em;
+  opacity: 0;
+}
+
+.section2-appear {
+    margin-left: 3em;
+  opacity: 1;
+}
+
+.section3-text {
+  transform: scale(1.25);
+  opacity: 0;
+}
+
+.section3-appear {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.main-content {
+  margin-top: 7em;
 }

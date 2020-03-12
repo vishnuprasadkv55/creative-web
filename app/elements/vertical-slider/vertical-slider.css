@@ -1,0 +1,17 @@
+.slider-widget{
+    margin-top: 4em;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 30em;
+}
+.slider-widget>.slider-header{
+    font-size: 2em;
+}
+.slider-vertical{
+    display: flex;
+    flex-direction: column;
+}
+.slider-item{
+    padding-bottom: 2em;
+}
